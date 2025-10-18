@@ -34,8 +34,8 @@ default_config = {
             "Log_Size": "10 MB"       # Maximum log file size before rotation. 
         }
 
-config = Load_Config(default_config, Program_Name, script_dir)
-logger = Loguru_Logging(config, Program_Name, Program_Version, script_dir)
+config = Load_Config(default_config, Program_Name)
+logger = Loguru_Logging(config, Program_Name, Program_Version)
 '''
 global script_dir
 
