@@ -17,15 +17,14 @@ config = Load_Config(default_config)
 logger = Loguru_Logging(config, Program_Name, Program_Version)
 
 # To use default config minimum
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+from LogLibrary import Load_Config, Loguru_Logging
 # ----------------------- Configuration Values -----------------------
 Program_Name = ""        # Program name for identification and logging.
 Program_Version = ""            # Program version used for file naming and logging.
 # ---------------------------------------------------------------------
-# Determine the directory of the script or executable.
-if getattr(sys, 'frozen', False):
-    script_dir = os.path.dirname(sys.executable)
-else:
-    script_dir = os.path.dirname(os.path.abspath(__file__))
 
 default_config = {
             "log_Level": "DEBUG",
@@ -36,6 +35,8 @@ default_config = {
 
 config = Load_Config(default_config, Program_Name)
 logger = Loguru_Logging(config, Program_Name, Program_Version)
+
+----------------------------------------------------------------------------------------------------------------------------------------
 '''
 global script_dir
 
