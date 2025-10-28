@@ -2,6 +2,9 @@ from loguru import logger
 import json
 import sys
 import os
+from pyfiglet import Figlet
+
+color_fig = Figlet(font='slant')
 
 '''
 # To use the Log Library, first import the necessary functions:
@@ -92,10 +95,7 @@ def Loguru_Logging(config,Program_Name,Program_Version):
         compression="zip"
     )
 
-    logger.info('-' * 117)
-    logger.info('')
-    logger.info(f"Start {Program_Name} Version {Program_Version}")
-    logger.info('')
-    logger.info('-' * 117)
+    banner = color_fig.renderText(f"Start {Program_Name} Version {Program_Version}")
+    logger.info("\n" + banner)
 
     return logger
